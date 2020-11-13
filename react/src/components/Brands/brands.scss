@@ -1,0 +1,11 @@
+.mi-brands{
+  position: relative;
+  display: flex;
+  align-items: center;
+  &__item{
+    padding: 0 1.5rem;
+    &:first-child{
+      padding-left: 0;
+    }
+  }
+}

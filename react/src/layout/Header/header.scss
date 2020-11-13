@@ -1,0 +1,128 @@
+.mi-header{
+  width: 100%;
+  background-color: $lightColor;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  box-shadow: 0 1rem 1rem rgba($blackColor,0.01);
+  &__content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 7rem;
+  }
+  &__inner{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__addons{
+    margin-left: 4rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    .mi-btn{
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+  &__nav{
+    height: 100%;
+    display: none;
+    @include tablet{
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__logo{
+    max-width:4.7rem;
+    margin-right: 4rem;
+  }
+  &__list{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    display:flex;
+    align-items: center;
+  }
+  &__item{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-right: 3.5rem;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  &__link{
+    font-size: 1.4rem;
+    font-weight: 300;
+    color:$textColor;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    @include single-transition(all,ease-in-out,0.4s);
+    &:hover{
+      color:$blackColor;
+      @include single-transition(all,ease-in-out,0.4s);
+    }
+  }
+  @include tablet{
+    position: relative;
+    box-shadow: 0 0 0;
+  }
+}
+
+.mi-menu-btn{
+  position: relative;
+  height: 2.6rem;
+  width: 2.6rem;
+  margin-left: 2rem;
+  @include tablet{
+    display: none;
+  }
+  span{
+    display: block;
+    position: absolute;
+    height: 3px;
+    background-color: $blackColor;
+    border-radius: 5px;
+    right: 0;
+    @include single-transition(all,ease-in-out,0.4s);
+    &:first-child{
+      top: 0;
+      width: 66%;
+    }
+    &:nth-child(2){
+      top: 0.966rem;
+      width: 100%;
+    }
+    &:last-child{
+      top: 1.933rem;
+      width: 33%;
+    }
+  }
+  &.active{
+    span{
+      @include single-transition(all,ease-in-out,0.4s);
+    }
+    span:first-child{
+      width: 100%;
+      transform: rotate(-44deg);
+      transform-origin: bottom right;
+    }
+    span:nth-child(2){
+      width: 0;
+    }
+    span:last-child{
+      width: 100%;
+      transform: rotate(44deg);
+      transform-origin: top right;
+    }
+  }
+}

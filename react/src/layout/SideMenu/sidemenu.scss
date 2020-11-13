@@ -1,0 +1,42 @@
+.mi-sidemenu{
+  position: fixed;
+  z-index: 99;
+  top: 7rem;
+  bottom: 0;
+  right: -100%;
+  width: 35rem;
+  background-color: $lightColor;
+  box-shadow: -1rem 1rem 1rem rgba($blackColor,0.01);
+  @include single-transition(all,ease-in-out,0.4s);
+  &__nav{
+    position: relative;
+  }
+  &__list{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  &__item{
+    border-bottom: solid 1px rgba($grayColor,0.3);
+  }
+  &__link{
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color:$textColor;
+    height: 100%;
+    display: block;
+    @include single-transition(all,ease-in-out,0.4s);
+    &:hover{
+      color:$blackColor;
+      @include single-transition(all,ease-in-out,0.4s);
+    }
+  }
+  @include tablet{
+    display: none;
+  }
+  &.active{
+    right: 0;
+    @include single-transition(all,ease-in-out,0.4s);
+  }
+}

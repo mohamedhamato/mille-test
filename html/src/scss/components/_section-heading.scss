@@ -1,0 +1,17 @@
+.mi-heading{
+  position: relative;
+  &__title{
+    font-size: 4.2rem;
+    margin-bottom: 1.5rem;
+  }
+  &__desc{
+    font-size: 1.6rem;
+    p{
+      font-size: inherit;
+      margin-bottom: 2.5rem;
+      &:last-child{
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

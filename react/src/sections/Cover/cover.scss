@@ -1,0 +1,37 @@
+.mi-cover{
+  position:relative;
+  border-bottom: solid 1px $grayColor;
+  margin-top: 7rem;
+  &__data{
+    position:relative;
+    padding: 6rem 0;
+    @include tablet{
+      padding: 10rem 0;
+    }
+  }
+  &__title{
+    font-size:3.8rem;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    @include tablet{
+      font-size: 6rem;
+    }
+  }
+  &__lead{
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    font-weight: 300;
+  }
+  &__brands{
+    margin-top: 6rem;
+  }
+  &__img{
+    padding: 3rem 0;
+    @include tablet{
+      padding: 10rem 0;
+    }
+  }
+  @include tablet{
+    margin-top: 0;
+  }
+}

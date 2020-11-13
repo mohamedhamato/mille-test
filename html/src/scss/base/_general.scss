@@ -1,0 +1,49 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+img{
+  max-width: 100%;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+  cursor: pointer;
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+
+
+/* -------- "margin helpers" and "padding helpers"  --------- */
+$spaceamounts: (-120,-100,0,5, 10, 15, 20, 25, 30, 35, 40, 45, 50,55,60,65,70, 75,80,85,90,95, 100,120);
+$sides: (top, bottom, left, right);
+@each $space in $spaceamounts{
+  @each $side in $sides{
+    .m#{str-slice($side, 0, 1)}#{$space} {
+      margin-#{$side}: #{$space * 0.1 / 2 }rem !important;
+      @include tablet{
+        margin-#{$side}: #{$space * 0.1}rem !important;
+      }
+    }
+
+    .p#{str-slice($side, 0, 1)}#{$space} {
+      padding-#{$side}: #{$space  * 0.1 / 2 }rem !important;
+      @include tablet{
+        padding-#{$side}: #{$space  * 0.1 }rem !important;
+      }
+    }
+  }
+}
+
+.mt-lg-30{
+  margin-top: 3rem;
+  @include small-tablet{
+    margin-top: -3rem;
+  }
+}
